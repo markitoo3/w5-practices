@@ -58,7 +58,9 @@ function scope
 block scope
  */
 
-function d(){
+/* ez a function scope*/
+
+/* function d(){
     if(1+1 === 2){
     }
     var a = "Hello1"
@@ -68,5 +70,44 @@ function d(){
     console.log(b)
     console.log(c)
 }
-d()
+d() */
 
+/* let e = 1
+console.log(e)
+e = 2
+console.log(e)
+e = e*2
+console.log(e) */
+
+/* function multiplyByTwo(num){
+    console.log(num)
+    return num*2
+}
+let f = multiplyByTwo(1)
+console.log(f)
+console.log(multiplyByTwo(1)); */
+
+/* let g = {
+    myMethod: function(){
+        console.log("Hello");
+    }
+}
+g.myMethod()
+
+let window = {
+    addEventListener: function(eventName, evenFunction){
+        if (eventName === "load"){
+            evenFunction()
+        }
+    }
+}
+window.addEventListener("load", loadEvent) nem fog műküdni, csak példa */
+
+let h = {
+    anotherMethod: function(text){
+        return `You sent the following argument to this method: ${text}`
+    }
+}
+let i = h.anotherMethod("argument")
+console.log(i)
+console.log(h.anotherMethod("another argument"))
