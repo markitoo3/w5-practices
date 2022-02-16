@@ -103,11 +103,77 @@ let window = {
 }
 window.addEventListener("load", loadEvent) nem fog műküdni, csak példa */
 
-let h = {
+/* let h = {
     anotherMethod: function(text){
         return `You sent the following argument to this method: ${text}`
     }
 }
 let i = h.anotherMethod("argument")
 console.log(i)
-console.log(h.anotherMethod("another argument"))
+console.log(h.anotherMethod("another argument")) */
+
+/* let myString = "Mikkamakka";
+
+let mySecondString = myString;
+
+let myThirdString = "Mikkamakka"
+
+console.log(myString);
+console.log(mySecondString);
+console.log(myString === mySecondString);
+console.log(myString === myThirdString); */
+
+/* let myObject = {
+    myString: "Mikkamakka"
+};
+
+let mySecondObject = myObject
+
+let myThirdObject = {
+    myString: "Mikkamakka"
+};
+
+mySecondObject.myString = "dömdödöm";
+
+let myFourthObject = {...myObject};
+
+myFourthObject.myString = "Vacskamati";
+
+console.log(myObject.myString);
+console.log(myFourthObject.myString); */
+
+/* console.log(myObject === mySecondObject);
+console.log(myObject === myThirdObject);
+
+console.log(myObject.myString === myThirdObject.myString);
+ */
+/* console.log("" === "");
+console.log({} === {}); */
+
+
+/* window.addEventListener("load", function(){
+    console.log("My first load event")
+})
+ */
+
+function loadEvent() {
+    //console.log("My second load event")
+    let rootElement = document.getElementById("root")
+
+    let card = function (movieRecieve){
+        return `
+        <div class="card">
+            <p class="title">${movieRecieve.title}</p>
+            <p class="year">${movieRecieve.year}</p>
+            <p class="rate">${movieRecieve.rate}</p>
+        </div>`;
+}
+
+    for (const movieSend of movies) {
+        rootElement.insertAdjacentHTML("beforeend", card(movieSend))
+    }
+
+}
+
+window.addEventListener("load", loadEvent)
+

@@ -1,0 +1,29 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+
+#root div {
+    flex-basis: calc(33% - 10px);
+    height: 200px;
+    background: linear-gradient(345deg, rgba(192,179,161,0.4) 0%, rgba(84,84,84,0.4) 60%, rgba(192,179,161,0.4) 100%);
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.year {
+    font-size: 20px;
+}
+
+.rate {
+    font-size: 20px;
+}
